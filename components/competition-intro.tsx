@@ -6,8 +6,8 @@ export function CompetitionIntro() {
     <section className="py-16 bg-white">
       <div className="container mx-auto px-4 text-center">
         <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-          The Ultimate
-          <span className="text-red-700"> Election</span> Challenge
+          The ultimate
+          <span className="text-red-700"> election</span> challenge
         </h2>
         <div className="pb-6">
           <span className="text-gray-600 text-sm ">
