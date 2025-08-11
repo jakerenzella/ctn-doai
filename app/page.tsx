@@ -7,6 +7,7 @@ import { Footer } from "@/components/footer";
 import { TheChallengeSection } from "@/components/the-challenge";
 import { ReadySection } from "@/components/ready";
 import { Timeline } from "@/components/timeline";
+import { Logos } from "@/components/logos";
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
       <Header />
       <main>
         <CompetitionIntro />
+        {/* <Logos /> */}
         <QuotesSection />
         <TheChallengeSection />
         <HowToPlay />
