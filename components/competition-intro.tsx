@@ -18,7 +18,7 @@ export function CompetitionIntro() {
           <BarTicker />
         </div>
 
-        <p className="text-base leading-5 text-left pl-8 max-w-sm mx-auto mb-8 font-medium text-balance">
+        <p className="text-base leading-5 text-left pl-8 max-w-sm mx-auto my-8 font-medium text-balance">
           Think you understand how social media really works? Join Australia's
           most innovative AI and Elections Literacy competition where high
           school students will use AI control and combat AI-powered
