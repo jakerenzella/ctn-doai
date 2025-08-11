@@ -21,10 +21,10 @@ export function QuotesSection() {
   ];
 
   return (
-    <section className="py-16 bg-gray-50">
+    <section id="about" className="py-16 bg-gray-50">
       <div className="container mx-auto px-4 ">
         <div className="text-center mb-12 ">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 font-dm-serif">
             AI bots are being used to manipulate elections
           </h2>
           {/* <p className="text-xl text-gray-700 max-w-2xl mx-auto">
@@ -39,7 +39,7 @@ export function QuotesSection() {
               className="p-6 bg-white shadow-lg hover:shadow-xl transition-shadow rounded-none"
             >
               <Quote className="w-8 h-8 text-red-600 mb-4" />
-              <blockquote className="text-gray-700 mb-4 italic text-lg leading-relaxed">
+              <blockquote className="text-gray-700 mb-4 italic text-lg leading-6">
                 "{quote.text}"
               </blockquote>
               <div className="border-t pt-4">

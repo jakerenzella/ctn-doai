@@ -61,15 +61,19 @@ export const BarTicker = () => {
         />
       </div>
 
-      <div className="mb-2 flex justify-between text-lg font-semibold">
-        <div className="text-blue-900">
-          <span className="text-lg md:text-2xl mr-0.5">{(romansPercentage * 5).toFixed(0)}</span>{" "}
-          <span className="text-md md:text-xl uppercase">Romans</span>
+      <div className="mb-2 flex justify-between text-lg font-semibold uppercase">
+        <div className="text-blue-900 font-black flex items-center">
+          <span className="text-lg md:text-2xl mr-2">
+            {(romansPercentage * 5).toFixed(0)}
+          </span>{" "}
+          <span className="text-md md:text-xl">Romans</span>
         </div>
 
-        <div className="text-red-900">
-          <span className="text-lg md:text-xl mr-0.5 uppercase">Bots</span>{" "}
-          <span className="text-md md:text-2xl">{(aiPercentage * 5).toFixed(0)}</span>
+        <div className="text-red-900 font-black">
+          <span className="text-lg md:text-xl ">Bots</span>{" "}
+          <span className="text-md md:text-2xl ml-2">
+            {(aiPercentage * 5).toFixed(0)}
+          </span>
         </div>
       </div>
     </div>

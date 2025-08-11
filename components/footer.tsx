@@ -19,17 +19,12 @@ export function Footer() {
               </li>
               <li>
                 <a href="#" className="hover:text-white">
-                  Rules
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-white">
-                  Prizes
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-white">
                   Timeline
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:text-white">
+                  Rules
                 </a>
               </li>
             </ul>
@@ -62,14 +57,14 @@ export function Footer() {
           <div>
             <h4 className="font-semibold mb-4">Contact</h4>
             <ul className="space-y-2 text-sm text-gray-400">
-              <li>info@capturethenarrative.com</li>
+              <li>dayofaiaustralia.com/contact</li>
               <li>Follow @CaptureNarrative</li>
               <li>#CaptureTheNarrative</li>
             </ul>
           </div>
         </div>
         <div className="border-t border-gray-800 mt-8 pt-8 text-center text-sm text-gray-400">
-          <p>&copy; 2024 Capture the Narrative Competition. All rights reserved.</p>
+          <p>&copy; 2025 Capture the Narrative Competition. All rights reserved.</p>
         </div>
       </div>
     </footer>

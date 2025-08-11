@@ -1,134 +1,93 @@
-import { Card } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Bot, Target, Trophy, Users } from "lucide-react";
+import Image from "next/image";
+
+// Data for the "How to Play" steps
+const stepsData = [
+  {
+    step: "1",
+    title: "Join the platform",
+    description:
+      "Your first step is to enrol in the competition, which will create your account on the social media platform. You can join with a team of up to 4.",
+    imageSrc: "/new-signup.png",
+    imageAlt: "A user sign-up form for the platform",
+  },
+  {
+    step: "2",
+    title: "Receive your assignments",
+    description:
+      "Practice in a safe, artificial social media landscape designed specifically for learning and competition.",
+    imageSrc: "/new-assignments.png",
+    imageAlt: "A list of new assignments in the platform",
+  },
+  {
+    step: "3",
+    title: "Build your bot",
+    description:
+      "Access your election control panel, craft an AI bot which reads and reacts to the content of the system. You can post, repost, reply, like, follow, unfollow, search and #tag!",
+    imageSrc: "/new-bots.png",
+    imageAlt: "An interface for building and configuring a bot",
+  },
+  {
+    step: "4",
+    title: "Steer the story to victory",
+    description:
+      "Using your bots, you will compete with the other teams to gain influence and earn story points by creating viral content. The most effective team… will win!",
+    imageSrc: "/new-victory.png",
+    imageAlt: "A trophy",
+  },
+];
 
 export function HowToPlay() {
   return (
-    <section id="how-to-play" className="py-16 bg-white">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
+    <section id="how-to-play" className="py-16 md:py-24 md:px-80 bg-white">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-12 md:mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
             How to Play
           </h2>
-          <p className="text-xl text-gray-700 max-w-2xl mx-auto">
+          <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">
             Enter the world of digital warfare and learn to combat AI
-            disinformation
+            disinformation.
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
-          <div>
-            <h3 className="text-2xl font-bold text-gray-900 mb-6">
-              1 - Join the platform
-            </h3>
-            <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-              Your first step is to enrol in the competition, which will create
-              your account on the social media platform. You can do this below.
-              You can join with a team of up to 4.
-            </p>
-            <p className="text-lg text-gray-700 leading-relaxed">
-              From the 2016 US presidential election to the 2020 Australian
-              bushfires, AI bots have been used to amplify misinformation, sow
-              discord, and manipulate public opinion.
-            </p>
-          </div>
-          <div className="bg-red-50 p-8 rounded-lg">
-            <Bot className="w-16 h-16 text-red-600 mb-4" />
-            <h4 className="text-xl font-semibold text-gray-900 mb-2">
-              Real-World Impact
-            </h4>
-            <p className="text-gray-700">
-              Learn how AI manipulation affects elections, public health
-              decisions, and social movements through hands-on experience.
-            </p>
-          </div>
-        </div>
+        {/* This main container now just stacks the steps vertically */}
+        <div className="flex flex-col gap-y-16 md:gap-y-4">
+          {stepsData.map((step, index) => (
+            // Each step is now its own grid, creating a single row with two columns on desktop
+            <div
+              key={step.step}
+              className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center"
+            >
+              {/* Image Block: Centered on mobile. Alternates position on desktop. */}
+              <div
+                className={`flex justify-center ${
+                  index % 2 !== 0 ? "lg:order-last lg:justify-start" : "lg:justify-end"
+                }`}
+              >
+                <Image
+                  src={step.imageSrc}
+                  width={300} // Increased size slightly for better visuals in a full row
+                  height={300}
+                  alt={step.imageAlt}
+                  className="mb-0"
+                />
+              </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
-          <div className="bg-blue-50 p-8 rounded-lg lg:order-2">
-            <Target className="w-16 h-16 text-blue-600 mb-4" />
-            <h4 className="text-xl font-semibold text-gray-900 mb-2">
-              Controlled Environment
-            </h4>
-            <p className="text-gray-700">
-              Practice in a safe, artificial social media landscape designed
-              specifically for learning and competition.
-            </p>
-          </div>
-          <div className="lg:order-1">
-            <h3 className="text-2xl font-bold text-gray-900 mb-6">
-              Our Competition Simulates Real-World Disinformation
-            </h3>
-            <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-              Capture the Narrative provides hands-on experience in identifying
-              security threats as well as raise awareness of poor security
-              practices.
-            </p>
-            <p className="text-lg text-gray-700 leading-relaxed">
-              <strong>
-                Capture the Narrative takes this concept to a new level.
-              </strong>
-            </p>
-          </div>
-        </div>
-
-        <Card className="p-8 bg-gradient-to-r from-red-50 to-blue-50 mb-12">
-          <div className="text-center mb-8">
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">
-              The Challenge
-            </h3>
-            <p className="text-lg text-gray-700 max-w-4xl mx-auto leading-relaxed">
-              Through a controlled, artificial social media landscape,
-              competitors will be charged with the manipulation of social media
-              narratives by developing and deploying bots that amplify and
-              suppress target messages.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-6 mb-8">
-            <div className="text-center">
-              <Users className="w-12 h-12 text-red-600 mx-auto mb-3" />
-              <h4 className="font-semibold text-gray-900 mb-2">Team Up</h4>
-              <p className="text-gray-700 text-sm">
-                Form teams and strategize your approach
-              </p>
+              {/* Text Block: Centered on mobile. Alternates alignment on desktop. */}
+              <div
+                className={`text-center ${
+                  index % 2 !== 0 ? "lg:text-right" : "lg:text-left"
+                }`}
+              >
+                <h4 className="text-2xl font-bold text-gray-900 mb-4 uppercase">
+                  {step.step} - {step.title}
+                </h4>
+                <p className="text-md text-gray-800 text-balance ">
+                  {step.description}
+                </p>
+              </div>
             </div>
-            <div className="text-center">
-              <Bot className="w-12 h-12 text-blue-600 mx-auto mb-3" />
-              <h4 className="font-semibold text-gray-900 mb-2">Deploy Bots</h4>
-              <p className="text-gray-700 text-sm">
-                Create AI bots to influence narratives
-              </p>
-            </div>
-            <div className="text-center">
-              <Trophy className="w-12 h-12 text-yellow-600 mx-auto mb-3" />
-              <h4 className="font-semibold text-gray-900 mb-2">Win Prizes</h4>
-              <p className="text-gray-700 text-sm">
-                Compete for AU$5,000 in prizes
-              </p>
-            </div>
-          </div>
-        </Card>
-
-        <div className="text-center bg-gray-50 p-8 rounded-lg">
-          <h3 className="text-2xl font-bold text-gray-900 mb-4">
-            Ready to Join the Fight Against Disinformation?
-          </h3>
-          <p className="text-lg text-gray-700 mb-6 max-w-3xl mx-auto">
-            Capture the Narrative provides interactive insights into how social
-            media platforms can be manipulated, raising awareness of the
-            potential for abuse and the importance of AI literacy.
-          </p>
-          <p className="text-xl font-semibold text-red-600 mb-6">
-            Sound interesting? Join in! The top team will take home AU$5,000 and
-            our competition is open to students from every Australian School.
-          </p>
-          <Button
-            size="lg"
-            className="bg-red-600 hover:bg-red-700 text-lg px-8 py-3"
-          >
-            Register Your Team Now
-          </Button>
+          ))}
         </div>
       </div>
     </section>
