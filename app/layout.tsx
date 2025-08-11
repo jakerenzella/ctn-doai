@@ -4,7 +4,7 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Capture the Narrative",
-  description: "Created by Day of AI Australia",
+  description: "The ultimate election challenge",
 };
 
 const dmserif = DM_Serif_Text({
