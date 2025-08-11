@@ -6,7 +6,7 @@ export function Footer() {
           <div>
             <h3 className="text-lg font-semibold mb-4">Capture the Narrative</h3>
             <p className="text-gray-400 text-sm">
-              Australia's premier cybersecurity competition for high school students.
+              Australia's premier AI Literacy competition for high school students.
             </p>
           </div>
           <div>

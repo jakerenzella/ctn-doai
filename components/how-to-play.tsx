@@ -60,8 +60,7 @@ export function HowToPlay() {
               Our Competition Simulates Real-World Disinformation
             </h3>
             <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-              Capture the Flag competitions are a staple in the cybersecurity
-              community. They provide hands-on experience in identifying
+              Capture the Narrative provides hands-on experience in identifying
               security threats as well as raise awareness of poor security
               practices.
             </p>
@@ -118,7 +117,7 @@ export function HowToPlay() {
           <p className="text-lg text-gray-700 mb-6 max-w-3xl mx-auto">
             Capture the Narrative provides interactive insights into how social
             media platforms can be manipulated, raising awareness of the
-            potential for abuse and the importance of digital cyberliteracy.
+            potential for abuse and the importance of AI literacy.
           </p>
           <p className="text-xl font-semibold text-red-600 mb-6">
             Sound interesting? Join in! The top team will take home AU$5,000 and
