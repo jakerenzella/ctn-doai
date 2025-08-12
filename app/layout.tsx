@@ -3,23 +3,23 @@ import { DM_Serif_Text, Figtree } from "next/font/google";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Capture the Narrative",
-  description: "The ultimate election challenge",
+  title: "Capture the Narrative | Day of AI Australia",
+  description:
+    "Register now for Australia's ultimate election challenge. Create AI bots to capture the narrative in a simulated election over three weeks.",
 };
 
 const dmserif = DM_Serif_Text({
-    weight: '400',
-    subsets: ['latin'],
-    display: 'swap',
-    variable: '--font-dm-serif',
+  weight: "400",
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-dm-serif",
 });
 
 const figtree = Figtree({
-    subsets: ['latin'],
-    display: 'swap',
-    variable: '--font-figtree',
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-figtree",
 });
-
 
 export default function RootLayout({
   children,
