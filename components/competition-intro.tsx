@@ -1,5 +1,6 @@
-import { Button } from "@/components/ui/button"
+import { Button } from "@/components/ui/button";
 import { BarTicker } from "./bar-ticker";
+import Link from "next/link";
 
 export function CompetitionIntro() {
   return (
@@ -26,10 +27,17 @@ export function CompetitionIntro() {
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Button
+            // link to http://social.local.legitreal.com:8000/register
+            asChild
             size="lg"
             className="bg-red-600 hover:bg-red-700 rounded-none text-lg px-8 py-3"
           >
-            Join the competition
+            <Link
+              href="http://social.local.legitreal.com:8000/register"
+              target="_blank"
+            >
+              Join the competition
+            </Link>
           </Button>
           <Button
             size="lg"
