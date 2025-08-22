@@ -7,7 +7,11 @@ import {
 } from "@/components/ui/shadcn-io/marquee";
 import Image from "next/image";
 
-const images = [{ imgSrc: "/unsw-grayscale.png" }, { imgSrc: "/dayofai.webp" }];
+const images = [
+  { imgSrc: "/unsw-grayscale.png" },
+  { imgSrc: "/dayofai.webp", width: 55 },
+  { imgSrc: "/googleorg.jpeg", width: 200, height: 128 },
+];
 
 export const Logos = () => (
   <section>
@@ -18,13 +22,13 @@ export const Logos = () => (
           <MarqueeFade side="right" />
           <MarqueeContent>
             {images.map((image, index) => (
-              <MarqueeItem className="h-32 w-32" key={index}>
+              <MarqueeItem className="mx-8" key={index}>
                 <Image
-                  alt={`Placeholder ${index}`}
+                  alt={`Logo ${index}`}
                   className="overflow-hidden"
                   src={image.imgSrc}
-                  width={128}
-                  height={128}
+                  width={image.width || 128}
+                  height={image.height || 128}
                   loading="lazy"
                 />
               </MarqueeItem>
