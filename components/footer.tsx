@@ -68,7 +68,7 @@ export function Footer() {
             <h4 className="font-semibold mb-4">Contact</h4>
             <ul className="space-y-2 text-sm text-gray-400">
               <li>dayofaiaustralia.com/contact</li>
-              <li>Follow @dayofaiaustralia</li>
+              <li>Follow @dayofaiaustral1</li>
               <li>#winthefarm25</li>
             </ul>
           </div>
