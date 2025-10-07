@@ -1,36 +1,60 @@
-"use client";
-import {
-  Marquee,
-  MarqueeContent,
-  MarqueeFade,
-  MarqueeItem,
-} from "@/components/ui/shadcn-io/marquee";
 import Image from "next/image";
 
-const images = [{ imgSrc: "/unsw-grayscale.png" }, { imgSrc: "/dayofai.webp" }];
-
 export const Logos = () => (
-  <section>
-    <div className="my-4 ">
-      <div className="flex size-full items-center justify-center bg-background">
-        <Marquee>
-          <MarqueeFade side="left" />
-          <MarqueeFade side="right" />
-          <MarqueeContent>
-            {images.map((image, index) => (
-              <MarqueeItem className="h-32 w-32" key={index}>
-                <Image
-                  alt={`Placeholder ${index}`}
-                  className="overflow-hidden"
-                  src={image.imgSrc}
-                  width={128}
-                  height={128}
-                  loading="lazy"
-                />
-              </MarqueeItem>
-            ))}
-          </MarqueeContent>
-        </Marquee>
+  <section className="bg-white py-12 border-t">
+    <div className="container mx-auto px-4">
+      <div className="flex flex-col items-center justify-center gap-8">
+        {/* Top row - UNSW logos */}
+        <div className="flex items-center justify-center gap-12 flex-wrap">
+          <Image
+            src="/logos/new-UNSW-logo-png-vertical-crest.png"
+            alt="UNSW Sydney"
+            width={100}
+            height={100}
+            className="object-contain"
+          />
+          <Image
+            src="/logos/unsw-ai-institute.png"
+            alt="UNSW AI Institute"
+            width={220}
+            height={100}
+            className="object-contain"
+          />
+          <Image
+            src="/logos/Logo__IFCYBER_Landscape_Colour Positive (2).png"
+            alt="UNSW Institute for Cyber Security"
+            width={200}
+            height={100}
+            className="object-contain"
+          />
+        </div>
+
+        {/* Middle - Google.org support */}
+        <div className="flex items-center justify-center gap-12 flex-wrap">
+          <Image
+            src="/logos/logo_Google.org_Support_FullColor_cmyk coated_regular.png"
+            alt="with support from Google.org"
+            width={330}
+            height={80}
+            className="object-contain mx-auto"
+          />
+
+          <div className="text-center">
+            <div className="flex items-center justify-center gap-12 flex-wrap mb-4">
+              <Image
+                src="/logos/TDMFOUNDATION_PRIMARYLOGO.png"
+                alt="TDM Foundation"
+                width={120}
+                height={80}
+                className="object-contain"
+              />
+            </div>
+          </div>
+        </div>
+        <p className="text-gray-700 text-sm">
+          together with <span className="font-bold">ABC Education</span> and{" "}
+          <span className="font-bold">Australian Media Literacy Alliance</span>
+        </p>
       </div>
     </div>
   </section>

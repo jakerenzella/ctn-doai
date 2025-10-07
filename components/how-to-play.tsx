@@ -38,8 +38,8 @@ const stepsData = [
 
 export function HowToPlay() {
   return (
-    <section id="how-to-play" className="py-16 md:py-24 md:px-80 bg-white">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="how-to-play" className="py-16 md:py-24 bg-white">
+      <div className="mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12 md:mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
             How to Play
@@ -51,7 +51,7 @@ export function HowToPlay() {
         </div>
 
         {/* This main container now just stacks the steps vertically */}
-        <div className="flex flex-col gap-y-16 md:gap-y-4">
+        <div className="flex flex-col gap-y-16 md:gap-y-4 xl:px-20 2xl:px-120">
           {stepsData.map((step, index) => (
             // Each step is now its own grid, creating a single row with two columns on desktop
             <div

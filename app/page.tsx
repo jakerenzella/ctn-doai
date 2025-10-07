@@ -16,13 +16,13 @@ export default function Home() {
       <Header />
       <main>
         <CompetitionIntro />
-        {/* <Logos /> */}
         <QuotesSection />
         <TheChallengeSection />
         <HowToPlay />
         <Timeline />
         <ReadySection />
       </main>
+      <Logos />
       <Footer />
     </div>
   );

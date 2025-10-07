@@ -15,7 +15,7 @@ export function Header() {
             </h1>
           </div>
           <nav className="hidden md:flex items-center space-x-6 font-sans uppercase">
-            <a href="#about" className="font-bold hover:text-red-600 ">
+            <a href="/about" className="font-bold hover:text-red-600 ">
               About
             </a>
             <a href="#how-to-play" className="font-bold hover:text-red-600 ">
