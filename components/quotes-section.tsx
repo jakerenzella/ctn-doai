@@ -40,7 +40,7 @@ export function QuotesSection() {
             >
               <Quote className="w-8 h-8 text-red-600 mb-4" />
               <blockquote className="text-gray-700 mb-4 italic text-lg leading-6">
-                "{quote.text}"
+                &quot;{quote.text}&quot;
               </blockquote>
               <div className="border-t pt-4">
                 <p className="font-semibold text-gray-900">{quote.author}</p>

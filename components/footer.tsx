@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export function Footer() {
   return (
     <footer className="bg-gray-900 text-white py-12">
@@ -6,21 +8,21 @@ export function Footer() {
           <div>
             <h3 className="text-lg font-semibold mb-4">Win the Farm</h3>
             <p className="text-gray-400 text-sm">
-              Australia's most innovative national competition exploring the intersection of AI, media literacy, and elections.
+              Australia&apos;s most innovative national competition exploring the intersection of AI, media literacy, and elections.
             </p>
           </div>
           <div>
             <h4 className="font-semibold mb-4">Competition</h4>
             <ul className="space-y-2 text-sm text-gray-400">
               <li>
-                <a href="/#how-to-play" className="hover:text-white">
+                <Link href="/#how-to-play" className="hover:text-white">
                   How to Play
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/#timeline" className="hover:text-white">
+                <Link href="/#timeline" className="hover:text-white">
                   Timeline
-                </a>
+                </Link>
               </li>
               <li>
                 <a href="/rules" className="hover:text-white">

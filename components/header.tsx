@@ -1,8 +1,8 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { LiveTicker } from "./live-ticker";
 import Image from "next/image";
+import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
 
@@ -13,7 +13,7 @@ export function Header() {
     <header className="bg-white shadow sticky top-0 z-50">
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
-          <a href="/" className="flex items-center space-x-4 hover:opacity-80 transition-opacity">
+          <Link href="/" className="flex items-center space-x-4 hover:opacity-80 transition-opacity">
             <Image
               src="/logos/dayofai.webp"
               alt="Day of AI Australia"
@@ -24,19 +24,19 @@ export function Header() {
             <h1 className="text-2xl font-bold text-gray-900 font-dm-serif">
               Win the Farm
             </h1>
-          </a>
+          </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-6 font-sans uppercase">
-            <a href="/about" className="font-bold hover:text-red-600 ">
+            <Link href="/about" className="font-bold hover:text-red-600 ">
               About
-            </a>
-            <a href="/#how-to-play" className="font-bold hover:text-red-600 ">
+            </Link>
+            <Link href="/#how-to-play" className="font-bold hover:text-red-600 ">
               How to play
-            </a>
-            <a href="/#timeline" className="font-bold hover:text-red-600 ">
+            </Link>
+            <Link href="/#timeline" className="font-bold hover:text-red-600 ">
               Timeline
-            </a>
+            </Link>
             <a href="/setting" className="font-bold hover:text-red-600 ">
               Setting
             </a>
@@ -66,27 +66,27 @@ export function Header() {
         {mobileMenuOpen && (
           <nav className="md:hidden mt-4 pb-4 border-t border-gray-200 pt-4">
             <div className="flex flex-col space-y-4 font-sans uppercase">
-              <a
+              <Link
                 href="/about"
                 className="font-bold hover:text-red-600 py-2"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 About
-              </a>
-              <a
+              </Link>
+              <Link
                 href="/#how-to-play"
                 className="font-bold hover:text-red-600 py-2"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 How to play
-              </a>
-              <a
+              </Link>
+              <Link
                 href="/#timeline"
                 className="font-bold hover:text-red-600 py-2"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Timeline
-              </a>
+              </Link>
               <a
                 href="/setting"
                 className="font-bold hover:text-red-600 py-2"

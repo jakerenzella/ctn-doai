@@ -1,5 +1,3 @@
-import { Bot, Trophy, Users } from "lucide-react";
-import { Card } from "./ui/card";
 import { Button } from "./ui/button";
 
 export function ReadySection() {
@@ -14,9 +12,9 @@ export function ReadySection() {
         for abuse and the importance of AI literacy.
       </p>
       <p className="text-lg  mb-6 max-w-3xl mx-auto">
-        The top teams in each category (Years 7–8 and Year 9–10) will each take
+        The top teams in each category (Years 7-8 and Year 9-10) will each take
         home $1,500 in prizes. The competition is open to all Australian students in
-        Years 7–10 who have completed the Day of AI Australia "Media Literacy and AI"
+        Years 7-10 who have completed the Day of AI Australia &quot;Media Literacy and AI&quot;
         lesson with their registered teacher.
       </p>
       <Button
