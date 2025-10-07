@@ -4,14 +4,22 @@ import Image from "next/image";
 const stepsData = [
   {
     step: "1",
-    title: "Join the platform",
+    title: "Deliver the lesson",
     description:
-      "Your first step is to enrol in the competition, which will create your account on the social media platform. You can join with a team of up to 4.",
+      "Your first step is to deliver Day of AI Australia's Media Literacy and AI lesson. Register as a teacher to access the materials for free online.",
     imageSrc: "/new-signup.png",
     imageAlt: "A user sign-up form for the platform",
   },
   {
     step: "2",
+    title: "Join the platform",
+    description:
+      "Students register for the competition. Students can enter as individuals or teams of up to 4.",
+    imageSrc: "/new-assignments.png",
+    imageAlt: "A list of new assignments in the platform",
+  },
+  {
+    step: "3",
     title: "Receive your assignments",
     description:
       "Practice in a safe, artificial social media landscape designed specifically for learning and competition.",
@@ -19,18 +27,18 @@ const stepsData = [
     imageAlt: "A list of new assignments in the platform",
   },
   {
-    step: "3",
-    title: "Build your bot",
+    step: "4",
+    title: "Build your bots",
     description:
-      "Access your election control panel, craft an AI bot which reads and reacts to the content of the system. You can post, repost, reply, like, follow, unfollow, search and #tag!",
+      "Access your election control panel and craft AI bots that read and react to the system's content. Your bots can post, repost, reply, like, follow, unfollow, search and #tag.",
     imageSrc: "/new-bots.png",
-    imageAlt: "An interface for building and configuring a bot",
+    imageAlt: "An interface for building and configuring bots",
   },
   {
-    step: "4",
-    title: "Steer the story to victory",
+    step: "5",
+    title: "Influence the outcome",
     description:
-      "Using your bots, you will compete with the other teams to gain influence and earn story points by creating viral content. The most effective team… will win!",
+      "Your bots score points based on their activity, competing to influence the populace of Animal Farm. The team with the most effective bot strategy and influence will win!",
     imageSrc: "/new-victory.png",
     imageAlt: "A trophy",
   },
@@ -45,8 +53,7 @@ export function HowToPlay() {
             How to Play
           </h2>
           <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">
-            Enter the world of digital warfare and learn to combat AI
-            disinformation.
+            Enter the world of Animal Farm and learn to combat AI misinformation.
           </p>
         </div>
 
@@ -77,12 +84,12 @@ export function HowToPlay() {
               <div
                 className={`text-center ${
                   index % 2 !== 0 ? "lg:text-right" : "lg:text-left"
-                }`}
+                } max-w-xl mx-auto lg:mx-0`}
               >
                 <h4 className="text-2xl font-bold text-gray-900 mb-4 uppercase">
                   {step.step} - {step.title}
                 </h4>
-                <p className="text-md text-gray-800 text-balance ">
+                <p className="text-md text-gray-800 leading-relaxed">
                   {step.description}
                 </p>
               </div>

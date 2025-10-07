@@ -17,12 +17,12 @@ export function TheChallengeSection() {
         <div className="text-center">
           <Users className="w-12 h-12 text-red-600 mx-auto mb-3" />
           <p className="font-bold text-gray-900 ">Team Up</p>
-          <p className=" text-sm">Form teams and strategise</p>
+          <p className=" text-sm">Form teams in your classroom, or play solo</p>
         </div>
         <div className="text-center">
           <Bot className="w-12 h-12 text-blue-600 mx-auto mb-3" />
           <p className="font-bold text-gray-900 ">Deploy Bots</p>
-          <p className=" text-sm">Create AI bots to influence narratives</p>
+          <p className=" text-sm">Create AI bots to influence the Animal Farm citizens</p>
         </div>
         <div className="text-center">
           <Trophy className="w-12 h-12 text-yellow-600 mx-auto mb-3" />

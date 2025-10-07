@@ -1,9 +1,10 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import Image from "next/image";
 
 export const BarTicker = () => {
-  const [romansPercentage, setRomansPercentage] = useState(50);
+  const [hettyPercentage, setHettyPercentage] = useState(50);
   const velocityRef = useRef(0);
 
   useEffect(() => {
@@ -15,7 +16,7 @@ export const BarTicker = () => {
     const MAX = 58;
 
     const interval = setInterval(() => {
-      setRomansPercentage((prev) => {
+      setHettyPercentage((prev) => {
         const force = PULL * (CENTER - prev);
         const noise = (Math.random() - 0.5) * 2 * NOISE_RANGE;
 
@@ -38,17 +39,17 @@ export const BarTicker = () => {
     return () => clearInterval(interval);
   }, []);
 
-  const aiPercentage = 100 - romansPercentage;
+  const napoleonPercentage = 100 - hettyPercentage;
 
   return (
     <div className="w-full max-w-4xl relative">
       <div className="flex h-12 w-full overflow-hidden rounded-none border-black border-2 relative">
-        {/* Romans */}
+        {/* Hetty */}
         <div
           className="flex items-center justify-center bg-[#3571C0] transition-all duration-1000 ease-out"
-          style={{ width: `${romansPercentage}%` }}
+          style={{ width: `${hettyPercentage}%` }}
         />
-        {/* AI fills remainder */}
+        {/* Napoleon fills remainder */}
         <div className="flex-1 flex items-center justify-center bg-[#FE5F40] transition-all duration-1000 ease-out" />
 
         {/* Center win line */}
@@ -61,19 +62,33 @@ export const BarTicker = () => {
         />
       </div>
 
-      <div className="mb-2 flex justify-between text-lg font-semibold uppercase">
-        <div className="text-blue-900 font-black flex items-center">
-          <span className="text-lg md:text-2xl mr-2">
-            {(romansPercentage * 5).toFixed(0)}
-          </span>{" "}
-          <span className="text-md md:text-xl">Resistance</span>
+      <div className="mb-2 flex justify-between items-center text-lg font-semibold uppercase">
+        <div className="text-blue-900 font-black flex items-center gap-2">
+          <Image
+            src="/hetty-square.svg"
+            alt="Hetty"
+            width={32}
+            height={32}
+            className="rounded"
+          />
+          <span className="text-md md:text-xl">Hetty</span>
+          <span className="text-lg md:text-2xl">
+            {Math.round(hettyPercentage)}%
+          </span>
         </div>
 
-        <div className="text-red-900 font-black">
-          <span className="text-lg md:text-xl ">Directorate</span>{" "}
-          <span className="text-md md:text-2xl ml-2">
-            {(aiPercentage * 5).toFixed(0)}
+        <div className="text-red-900 font-black flex items-center gap-2">
+          <span className="text-lg md:text-2xl">
+            {Math.round(napoleonPercentage)}%
           </span>
+          <span className="text-md md:text-xl">Napoleon</span>
+          <Image
+            src="/napoleon-square.svg"
+            alt="Napoleon"
+            width={32}
+            height={32}
+            className="rounded"
+          />
         </div>
       </div>
     </div>

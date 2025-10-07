@@ -5,43 +5,43 @@ import { Calendar, Clock, Trophy, Users, Rocket, Flag } from "lucide-react"
 export function Timeline() {
   const timelineEvents = [
     {
-      date: "Friday September 19, 2025",
-      event: "Launch webinar. Start of contest",
+      date: "Monday 13 Oct, 2025",
+      event: "Day of AI Australia's Media Literacy and AI lesson available to registered teachers",
       icon: Rocket,
       color: "text-green-600",
       bgColor: "bg-green-50",
     },
     {
-      date: "Friday September 26, 2025",
-      event: "End of week 1",
-      icon: Clock,
-      color: "text-blue-600",
-      bgColor: "bg-blue-50",
+      date: "Fri 27 Sep – Fri 31 Oct, 2025",
+      event: "Media Literacy Week! Deliver the Media Literacy and AI lesson, students register for the competition and build their bots.",
+      icon: Users,
+      color: "text-purple-600",
+      bgColor: "bg-purple-50",
     },
     {
-      date: "Friday October 3, 2025",
-      event: "End of week 2",
-      icon: Clock,
-      color: "text-blue-600",
-      bgColor: "bg-blue-50",
-    },
-    {
-      date: "Friday October 10, 2025",
-      event: "End of week 3",
-      icon: Clock,
-      color: "text-blue-600",
-      bgColor: "bg-blue-50",
-    },
-    {
-      date: "Friday October 17, 2025",
-      event: "End of contest, finalists announced (and contacted)",
+      date: "Mon 3 Nov, 2025",
+      event: "Animal Farm election campaigns kick-off and bots commence their activities.",
       icon: Flag,
+      color: "text-blue-600",
+      bgColor: "bg-blue-50",
+    },
+    {
+      date: "Mon 3 – Fri 14 Nov, 2025",
+      event: "Election campaign unfolds in Animal Farm world - media covers the race, citizens are polled, and public opinion shifts. Students can change their strategy throughout the two week competition period.",
+      icon: Clock,
       color: "text-orange-600",
       bgColor: "bg-orange-50",
     },
     {
-      date: "Friday October 31, 2025",
-      event: "Prizegiving event in Sydney, NSW",
+      date: "Fri 14 Nov, 2025",
+      event: "Election held in Animal Farm world. Who has won? Which team had the most effective strategy?",
+      icon: Flag,
+      color: "text-red-600",
+      bgColor: "bg-red-50",
+    },
+    {
+      date: "Mon 17 Nov, 2025",
+      event: "Winning team announced",
       icon: Trophy,
       color: "text-yellow-600",
       bgColor: "bg-yellow-50",
@@ -61,13 +61,13 @@ export function Timeline() {
           </p>
         </div>
 
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-4xl mx-auto overflow-x-auto">
           <Card className="shadow-lg rounded-none">
             <div className="p-6">
               <Table>
                 <TableHeader>
                   <TableRow className="">
-                    <TableHead className="font-bold font-dm-serif text-lg">Date</TableHead>
+                    <TableHead className="font-bold font-dm-serif text-lg whitespace-nowrap">Date</TableHead>
                     <TableHead className="font-bold font-dm-serif text-lg">Event</TableHead>
                   </TableRow>
                 </TableHeader>
@@ -77,19 +77,18 @@ export function Timeline() {
                       key={index}
                       className="hover:bg-gray-50 transition-colors duration-200 border-b border-gray-100"
                     >
-                      <TableCell className="py-6">
-                        <div className="flex items-center space-x-3">
-                          <div className={`p-2 rounded-full ${item.bgColor}`}>
+                      <TableCell className="py-6 align-top">
+                        <div className="flex items-start space-x-3">
+                          <div className={`p-2 rounded-full ${item.bgColor} shrink-0`}>
                             <item.icon className={`w-5 h-5 ${item.color}`} />
                           </div>
-                          <div>
-                            <div className="font-semibold text-gray-900 text-lg">{item.date.split(",")[0]}</div>
-                            <div className="text-sm text-gray-600">{item.date.split(",")[1]}</div>
+                          <div className="min-w-[140px]">
+                            <div className="font-semibold text-gray-900 text-base whitespace-nowrap">{item.date}</div>
                           </div>
                         </div>
                       </TableCell>
                       <TableCell className="py-6">
-                        <div className="text-lg text-gray-800 font-medium">{item.event}</div>
+                        <div className="text-base text-gray-800">{item.event}</div>
                       </TableCell>
                     </TableRow>
                   ))}
