@@ -66,11 +66,11 @@ export const BarTicker = () => {
           <span className="text-lg md:text-2xl mr-2">
             {(romansPercentage * 5).toFixed(0)}
           </span>{" "}
-          <span className="text-md md:text-xl">Romans</span>
+          <span className="text-md md:text-xl">Resistance</span>
         </div>
 
         <div className="text-red-900 font-black">
-          <span className="text-lg md:text-xl ">Bots</span>{" "}
+          <span className="text-lg md:text-xl ">Directorate</span>{" "}
           <span className="text-md md:text-2xl ml-2">
             {(aiPercentage * 5).toFixed(0)}
           </span>
