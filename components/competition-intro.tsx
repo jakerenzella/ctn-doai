@@ -1,7 +1,26 @@
+"use client";
+
 import { Button } from "@/components/ui/button"
 import { BarTicker } from "./bar-ticker";
+import { useEffect, useState } from "react";
 
 export function CompetitionIntro() {
+  const [daysRemaining, setDaysRemaining] = useState<number | null>(null);
+
+  useEffect(() => {
+    const calculateDays = () => {
+      const launchDate = new Date('2025-10-13T00:00:00+11:00'); // Sydney time
+      const now = new Date();
+      const diff = launchDate.getTime() - now.getTime();
+      const days = Math.ceil(diff / (1000 * 60 * 60 * 24));
+      setDaysRemaining(days > 0 ? days : 0);
+    };
+
+    calculateDays();
+    const interval = setInterval(calculateDays, 86400000); // Update daily
+    return () => clearInterval(interval);
+  }, [])
+
   return (
     <section className="py-16 bg-white">
       <div className="container mx-auto px-4 text-center">
@@ -12,17 +31,19 @@ export function CompetitionIntro() {
         <div className="pb-6">
           <span className="text-gray-600 text-sm ">
             Launching October 13, 2025
+            {daysRemaining !== null && daysRemaining > 0 && (
+              <span className="block mt-1 font-semibold text-red-600">
+                {daysRemaining} {daysRemaining === 1 ? 'day' : 'days'} to go
+              </span>
+            )}
           </span>
         </div>
         <div className="flex justify-center">
           <BarTicker />
         </div>
 
-        <p className="text-base leading-5 text-left pl-8 max-w-sm mx-auto my-8 font-medium text-balance">
-          Think you understand how social media really works? Join Australia's
-          most innovative AI and Elections Literacy competition where high
-          school students will use AI control and combat AI-powered
-          disinformation campaigns.
+        <p className="text-base leading-6 text-center max-w-3xl mx-auto my-8 text-balance">
+          Can your students tell what&apos;s real in an era of deepfakes and viral misinformation? Join Win the Farm, a national competition exploring the intersection of AI, media literacy, and elections. In this hands-on challenge, student teams create and deploy their own AI agents in a simulated election, learning to combat disinformation, analyse media bias, and strategically shape public opinion.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Button

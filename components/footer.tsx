@@ -1,30 +1,47 @@
+import Link from "next/link";
+
 export function Footer() {
   return (
     <footer className="bg-gray-900 text-white py-12">
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-4 gap-8">
           <div>
-            <h3 className="text-lg font-semibold mb-4">Capture the Narrative</h3>
+            <h3 className="text-lg font-semibold mb-4">Win the Farm</h3>
             <p className="text-gray-400 text-sm">
-              Australia's premier AI Literacy competition for high school students.
+              Australia&apos;s most innovative national competition exploring the intersection of AI, media literacy, and elections.
             </p>
           </div>
           <div>
             <h4 className="font-semibold mb-4">Competition</h4>
             <ul className="space-y-2 text-sm text-gray-400">
               <li>
-                <a href="#" className="hover:text-white">
+                <Link href="/#how-to-play" className="hover:text-white">
                   How to Play
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="hover:text-white">
+                <Link href="/#timeline" className="hover:text-white">
                   Timeline
+                </Link>
+              </li>
+              <li>
+                <a href="/rules" className="hover:text-white">
+                  Competition terms and conditions
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-white">
-                  Rules
+                <a href="/ethics" className="hover:text-white">
+                  Ethics
+                </a>
+              </li>
+              <li>
+                <a href="/setting" className="hover:text-white">
+                  Setting
+                </a>
+              </li>
+              <li>
+                <a href="/about" className="hover:text-white">
+                  About Us
                 </a>
               </li>
             </ul>
@@ -34,22 +51,17 @@ export function Footer() {
             <ul className="space-y-2 text-sm text-gray-400">
               <li>
                 <a href="#" className="hover:text-white">
-                  Getting Started
+                  Register as a teacher
                 </a>
               </li>
               <li>
                 <a href="#" className="hover:text-white">
-                  Documentation
+                  Access the lesson
                 </a>
               </li>
               <li>
                 <a href="#" className="hover:text-white">
                   FAQ
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-white">
-                  Support
                 </a>
               </li>
             </ul>
@@ -58,13 +70,13 @@ export function Footer() {
             <h4 className="font-semibold mb-4">Contact</h4>
             <ul className="space-y-2 text-sm text-gray-400">
               <li>dayofaiaustralia.com/contact</li>
-              <li>Follow @CaptureNarrative</li>
-              <li>#CaptureTheNarrative</li>
+              <li>Follow @dayofaiaustral1</li>
+              <li>#winthefarm25</li>
             </ul>
           </div>
         </div>
         <div className="border-t border-gray-800 mt-8 pt-8 text-center text-sm text-gray-400">
-          <p>&copy; 2025 Capture the Narrative Competition. All rights reserved.</p>
+          <p>&copy; 2025 Win the Farm Competition. All rights reserved.</p>
         </div>
       </div>
     </footer>
