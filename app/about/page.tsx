@@ -1,6 +1,7 @@
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import { Credits } from "@/components/credits";
+import { Logos } from "@/components/logos";
 
 export default function AboutPage() {
   return (
@@ -8,6 +9,7 @@ export default function AboutPage() {
       <Header />
       <main>
         <Credits />
+        <Logos />
       </main>
       <Footer />
     </div>
