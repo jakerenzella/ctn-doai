@@ -7,16 +7,16 @@ const stepsData = [
     title: "Deliver the lesson",
     description:
       "Your first step is to deliver Day of AI Australia's Media Literacy and AI lesson. Register as a teacher to access the materials for free online.",
-    imageSrc: "/new-signup.png",
-    imageAlt: "A user sign-up form for the platform",
+    imageSrc: "/deliver-lesson.png",
+    imageAlt: "Teacher delivering a lesson to students",
   },
   {
     step: "2",
     title: "Join the platform",
     description:
       "Students register for the competition. Students can enter as individuals or teams of up to 4.",
-    imageSrc: "/new-assignments.png",
-    imageAlt: "A list of new assignments in the platform",
+    imageSrc: "/new-signup.png",
+    imageAlt: "Person using an old style computer",
   },
   {
     step: "3",
