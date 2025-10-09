@@ -14,7 +14,7 @@ export const Logos = () => (
             className="object-contain"
           />
           <Image
-            src="/logos/unsw-ai-institute.png"
+            src="/logos/unsw-ai-institute.jpg"
             alt="UNSW AI Institute"
             width={220}
             height={100}
