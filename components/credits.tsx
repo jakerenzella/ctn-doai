@@ -51,16 +51,16 @@ export function Credits() {
 
               <p className="py-2 italic">With thanks to</p>
               <p>
-                <span className="font-bold">Hammond Pearce</span> - Core
-                Platform Advisor, UNSW Sydney
-              </p>
-              <p>
                 <span className="font-bold">Hamish Cox</span> - Software
                 Developer, Capture the Narrative, UNSW Sydney
               </p>
               <p>
                 <span className="font-bold">Thomas McTavish</span> - Software
                 Developer, Capture the Narrative, UNSW Sydney
+              </p>
+              <p>
+                <span className="font-bold">Hammond Pearce</span> - Core
+                Platform Advisor, UNSW Sydney
               </p>
             </div>
           </div>
@@ -111,19 +111,19 @@ export function Credits() {
             <h3 className="text-2xl font-bold mb-4">With Special Thanks To</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
               <p>Dr. Debi Ashenden</p>
-              <p>Roly Clifton-Bligh</p>
               <p>Jetha Chan</p>
-              <p>Dr. Sue Keay</p>
+              <p>Roly Clifton-Bligh</p>
               <p>Gaëlle Feghali</p>
               <p>Simon Freedman</p>
               <p>Nathaniel Fruchter</p>
+              <p>Dr. Sue Keay</p>
               <p>Tracey Lee-Joe</p>
               <p>Stef Lovett</p>
+              <p>Rahat Masood</p>
               <p>Jason Sandler</p>
               <p>Gladine Tan</p>
               <p>Oscar Wahltinez</p>
               <p>Andrew Zaldivar</p>
-              <p>Rahat Masood</p>
             </div>
           </div>
 
