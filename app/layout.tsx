@@ -3,9 +3,9 @@ import { DM_Serif_Text, Figtree } from "next/font/google";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Capture the Narrative | Day of AI Australia",
+  title: "Win the Farm | Day of AI Australia",
   description:
-    "Register now for Australia's ultimate election challenge. Create AI bots to capture the narrative in a simulated election over three weeks.",
+    "Register now for Australia's ultimate election challenge. Create AI bots to win the farm in a simulated election over three weeks.",
 };
 
 const dmserif = DM_Serif_Text({

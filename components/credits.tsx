@@ -20,7 +20,7 @@ export function Credits() {
               rel="noopener noreferrer"
               className="text-red-600 hover:text-red-700 underline"
             >
-              Capture the Narrative
+              Win the Farm
             </a>.
           </p>
 
